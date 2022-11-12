@@ -1,11 +1,11 @@
 ## App Description
 A simple Kanban board for task management. Every task that you add can be in one of three states:
-- 1. To do
-- 2. Doing
-- 3. Done
+1. To do
+2. Doing
+3. Done
 
 ## App Walk-through
-<img src="https://media.giphy.com/media/Ej0k1HDHPJiCsiUXn7/giphy.gif" width=200><br>
+<img src="https://media.giphy.com/media/Ej0k1HDHPJiCsiUXn7/giphy.gif" width=400><br>
 
 ## App Features
 - [x] 1. Create a new task
