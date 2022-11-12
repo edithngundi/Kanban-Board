@@ -1,0 +1,91 @@
+body {
+    background-color: rgb(255, 255, 255);
+    
+}
+
+.container {
+    width: 70%;
+    min-width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+  
+.kanban-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: sans-serif;
+}
+  
+.kanban-heading-text {
+    font-size: 1.8rem;
+    color: black;
+    background-color: #1d8451;
+    padding: 0.8rem 1.7rem;
+    border-radius: 0.5rem;
+    font-family: sans-serif;
+    margin: 1rem;
+}
+
+.kanban-column-heading-text {
+    font-size: 1.3rem;
+    padding: 0.8rem 1.7rem;
+    border-radius: 0.5rem;
+    font-family: sans-serif;
+    margin: 1rem;
+}
+
+.kanban-board {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: sans-serif;
+}
+  
+.kanban-block {
+    padding: 0.6rem;
+    width: 30.5%;
+    min-width: 14rem;
+    min-height: 4.5rem;
+    border-radius: 2rem;
+}
+  
+#TODO {
+    background-color: #a9e9b8;
+}
+
+#EDIT {
+    background-color: #a9e9b8;
+}
+
+#DOING {
+    background-color: #5fd756;
+}
+  
+#DONE {
+    background-color: rgb(165, 239, 80);
+}
+
+
+.content {
+    background-color: white;
+    margin: 0.2rem 0rem 0.3rem 0rem;
+    border: 0.1rem solid black;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.2rem 0.5rem 0.5rem;
+    text-align: left;
+    
+}
+
+.form {
+    margin: 0.2rem 0rem 0.3rem 0rem;
+    padding: 0.5rem 0.2rem 0.5rem 2rem;
+    border-radius: 0.2rem;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+

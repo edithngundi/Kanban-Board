@@ -1,0 +1,87 @@
+{% extends 'base.html'%}
+
+{% block head %}
+<title>Kanban Board</title>
+{% endblock %}
+
+{% block body %}
+
+<!-- Create tables for the tasks-->
+<div class="container">
+    <div class="kanban-heading">
+        <strong class="kanban-heading-text">
+            KANBAN BOARD
+        </strong>
+    </div>
+
+    <div class="kanban-board">
+        <div class="kanban-block" id="TODO">
+            <strong class="kanban-column-heading-text">
+                TO DO
+            </strong>
+            <div class="form">
+                <form action="/" method="POST">
+                    <input type="text" name="content" id="content">
+                    <input type="submit" value="Add task">
+                </form>
+            </div>
+            <div class="row">
+                <div class="col">
+                    {% for todo in todo %}
+                    <ul id=round>
+                        <div class="content">
+                        <span>{{ todo.content }} <br> {{ todo.date_created.date() }} </span> 
+                        </div>
+                        <button class="btn"><a href="/delete/{{ todo.id }}"><i class="fa fa-trash"></i></a></button>
+                        <button class="btn"><a href="/update/{{ todo.id }}"><i class="fa fa-pencil"></i></a></button>
+                        <button class="btn"><a href="/move_to_doing/{{ todo.id }}"><i class="fa fa-forward"></i></a></button>
+                    </ul>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div class="kanban-block" id="DOING">
+            <strong class="kanban-column-heading-text">
+                DOING
+            </strong>
+            <div class="row">
+                <div class="col">
+                    {% for doing in doing %}
+                    <ul id=round>
+                        <div class="content">
+                        <span>{{ doing.content }} <br> {{ doing.date_created.date() }} </span> 
+                        </div>
+                        <button class="btn"><a href="/delete/{{ doing.id }}"><i class="fa fa-trash"></i></a></button>
+                        <button class="btn"><a href="/move_to_todo/{{ doing.id }}"><i class="fa fa-backward"></i></a></button>
+                        <button class="btn"><a href="/move_to_done/{{ doing.id }}"><i class="fa fa-forward"></i></a></button>
+                    </ul>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="kanban-block" id="DONE">
+            <strong class="kanban-column-heading-text">
+                DONE
+            </strong>
+            <div class="row">
+                <div class="col">
+                    {% for done in done %}
+                    <ul id=round>
+                        <div class="content">
+                        <span>{{ done.content }} <br> {{ done.date_created.date() }} </span> 
+                        </div>
+                        <button class="btn"><a href="/delete/{{ done.id }}"><i class="fa fa-trash"></i></a></button>
+                        <button class="btn"><a href="/move_to_doing/{{ done.id }}"><i class="fa fa-backward"></i></a></button>
+                    </ul>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
