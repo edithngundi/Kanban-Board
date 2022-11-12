@@ -5,7 +5,7 @@ A simple Kanban board for task management. Every task that you add can be in one
 3. Done
 
 ## App Walk-through
-<img src="https://media.giphy.com/media/Ej0k1HDHPJiCsiUXn7/giphy.gif" width=400><br>
+<img src="https://media.giphy.com/media/Ej0k1HDHPJiCsiUXn7/giphy.gif" width=800><br>
 
 ## App Features
 - [x] 1. Create a new task
